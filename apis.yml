@@ -1,8 +1,8 @@
 aid: nodeping
 name: NodePing
 description: >-
-  Uptime Monitoring for Websites and ServicesFlat-rate plans that include
-  unlimited international SMS notifications and unlimited users 
+  Uptime Monitoring for Websites and ServicesFlat-rate plans that include unlimited
+  international SMS notifications and unlimited users.
 type: Index
 position: Consumer
 access: 3rd-Party
@@ -18,8 +18,8 @@ apis:
   - aid: nodeping:nodeping
     name: NodePing
     description: >-
-      Uptime Monitoring for Websites and ServicesFlat-rate plans that include
-      unlimited international SMS notifications and unlimited users 
+      Uptime Monitoring for Websites and ServicesFlat-rate plans that include unlimited
+      international SMS notifications and unlimited users.
     humanURL: ' https://nodeping.com/index.html'
     tags:
       - API
