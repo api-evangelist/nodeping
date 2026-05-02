@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-schema/nodeping-check-schema.json",
+  "title": "NodePing Check",
+  "description": "Schema for a NodePing monitoring check.",
+  "type": "object",
+  "required": ["type"],
+  "properties": {
+    "_id": { "type": "string", "description": "NodePing check identifier" },
+    "type": { "type": "string", "description": "Check type (HTTP, DNS, SMTP, PING, SSL, etc.)" },
+    "target": { "type": "string", "description": "Target URL, host, or address being checked" },
+    "label": { "type": "string", "description": "Human-readable label" },
+    "interval": { "type": "integer", "description": "Run interval in minutes" },
+    "enabled": { "type": "boolean", "description": "Whether the check is active" },
+    "public": { "type": "boolean", "description": "Whether results are publicly viewable" },
+    "threshold": { "type": "integer", "description": "Response time threshold" },
+    "sens": { "type": "integer", "description": "Sensitivity (consecutive failures before alerting)" },
+    "autodiag": { "type": "boolean", "description": "Run automatic diagnostics on failure" },
+    "homeloc": { "type": "string", "description": "Home probe location" },
+    "runlocations": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Probe regions where the check runs"
+    },
+    "dep": { "type": "string", "description": "Dependency check id" },
+    "mute": { "type": "boolean", "description": "Whether notifications are muted" },
+    "description": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "notifications": {
+      "type": "array",
+      "description": "Notification routing for the check",
+      "items": {
+        "type": "object",
+        "properties": {
+          "contact": { "type": "string" },
+          "delay": { "type": "integer" },
+          "schedule": { "type": "string" }
+        }
+      }
+    },
+    "state": { "type": "integer", "description": "Current state (1 up, 0 down)" },
+    "uuid": { "type": "string" },
+    "created": { "type": "integer", "description": "Created timestamp (epoch)" },
+    "modified": { "type": "integer", "description": "Modified timestamp (epoch)" }
+  }
+}

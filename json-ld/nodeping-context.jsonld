@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "@vocab": "https://nodeping.com/vocab#",
+    "schema": "https://schema.org/",
+    "Check": "schema:Action",
+    "Contact": "schema:Person",
+    "ContactGroup": "schema:Organization",
+    "Schedule": "schema:Schedule",
+    "Result": "schema:Observation",
+    "_id": "@id",
+    "type": "@type",
+    "label": "schema:name",
+    "target": "schema:url",
+    "description": "schema:description",
+    "tags": "schema:keywords",
+    "created": "schema:dateCreated",
+    "modified": "schema:dateModified"
+  }
+}
