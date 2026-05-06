@@ -1,0 +1,771 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: NodePing API
+  description: NodePing provides uptime monitoring for websites and services. The REST API lets accounts manage checks, contacts,
+    contact groups, schedules, results, notifications, and account settings.
+  tags:
+  - Nodeping
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: nodeping
+    baseUri: https://api.nodeping.com/api/1
+    description: NodePing API HTTP API.
+    authentication:
+      type: apikey
+      in: query
+      name: token
+      value: '{{NODEPING_TOKEN}}'
+    resources:
+    - name: accounts
+      path: /accounts
+      operations:
+      - name: getaccounts
+        method: GET
+        description: Get account information
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createaccount
+        method: POST
+        description: Create a SubAccount
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: updateaccount
+        method: PUT
+        description: Update account
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deleteaccount
+        method: DELETE
+        description: Delete a SubAccount
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: checks
+      path: /checks
+      operations:
+      - name: listchecks
+        method: GET
+        description: List checks
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createcheck
+        method: POST
+        description: Create a check
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: checks-checkid
+      path: /checks/{checkid}
+      operations:
+      - name: getcheck
+        method: GET
+        description: Get a single check
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: updatecheck
+        method: PUT
+        description: Update a check
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deletecheck
+        method: DELETE
+        description: Delete a check
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: contacts
+      path: /contacts
+      operations:
+      - name: listcontacts
+        method: GET
+        description: List contacts
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createcontact
+        method: POST
+        description: Create a contact
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: updatecontact
+        method: PUT
+        description: Update a contact
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deletecontact
+        method: DELETE
+        description: Delete a contact
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: contactgroups
+      path: /contactgroups
+      operations:
+      - name: listcontactgroups
+        method: GET
+        description: List contact groups
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createcontactgroup
+        method: POST
+        description: Create a contact group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: updatecontactgroup
+        method: PUT
+        description: Update a contact group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deletecontactgroup
+        method: DELETE
+        description: Delete a contact group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: schedules
+      path: /schedules
+      operations:
+      - name: listschedules
+        method: GET
+        description: List notification schedules
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: updateschedule
+        method: PUT
+        description: Update a schedule
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deleteschedule
+        method: DELETE
+        description: Delete a schedule
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: results
+      path: /results
+      operations:
+      - name: getresults
+        method: GET
+        description: Get check results
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: results-uptime
+      path: /results/uptime
+      operations:
+      - name: getuptime
+        method: GET
+        description: Get uptime statistics
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: results-current
+      path: /results/current
+      operations:
+      - name: getcurrentresults
+        method: GET
+        description: Get current check states
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: notifications
+      path: /notifications
+      operations:
+      - name: listnotifications
+        method: GET
+        description: List notifications
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: info
+      path: /info
+      operations:
+      - name: getinfo
+        method: GET
+        description: Get probe / location information
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: nodeping-rest
+    description: REST adapter for NodePing API.
+    resources:
+    - path: /accounts
+      name: getaccounts
+      operations:
+      - method: GET
+        name: getaccounts
+        description: Get account information
+        call: nodeping.getaccounts
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /accounts
+      name: createaccount
+      operations:
+      - method: POST
+        name: createaccount
+        description: Create a SubAccount
+        call: nodeping.createaccount
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /accounts
+      name: updateaccount
+      operations:
+      - method: PUT
+        name: updateaccount
+        description: Update account
+        call: nodeping.updateaccount
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /accounts
+      name: deleteaccount
+      operations:
+      - method: DELETE
+        name: deleteaccount
+        description: Delete a SubAccount
+        call: nodeping.deleteaccount
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /checks
+      name: listchecks
+      operations:
+      - method: GET
+        name: listchecks
+        description: List checks
+        call: nodeping.listchecks
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /checks
+      name: createcheck
+      operations:
+      - method: POST
+        name: createcheck
+        description: Create a check
+        call: nodeping.createcheck
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /checks/{checkid}
+      name: getcheck
+      operations:
+      - method: GET
+        name: getcheck
+        description: Get a single check
+        call: nodeping.getcheck
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /checks/{checkid}
+      name: updatecheck
+      operations:
+      - method: PUT
+        name: updatecheck
+        description: Update a check
+        call: nodeping.updatecheck
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /checks/{checkid}
+      name: deletecheck
+      operations:
+      - method: DELETE
+        name: deletecheck
+        description: Delete a check
+        call: nodeping.deletecheck
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /contacts
+      name: listcontacts
+      operations:
+      - method: GET
+        name: listcontacts
+        description: List contacts
+        call: nodeping.listcontacts
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /contacts
+      name: createcontact
+      operations:
+      - method: POST
+        name: createcontact
+        description: Create a contact
+        call: nodeping.createcontact
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /contacts
+      name: updatecontact
+      operations:
+      - method: PUT
+        name: updatecontact
+        description: Update a contact
+        call: nodeping.updatecontact
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /contacts
+      name: deletecontact
+      operations:
+      - method: DELETE
+        name: deletecontact
+        description: Delete a contact
+        call: nodeping.deletecontact
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /contactgroups
+      name: listcontactgroups
+      operations:
+      - method: GET
+        name: listcontactgroups
+        description: List contact groups
+        call: nodeping.listcontactgroups
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /contactgroups
+      name: createcontactgroup
+      operations:
+      - method: POST
+        name: createcontactgroup
+        description: Create a contact group
+        call: nodeping.createcontactgroup
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /contactgroups
+      name: updatecontactgroup
+      operations:
+      - method: PUT
+        name: updatecontactgroup
+        description: Update a contact group
+        call: nodeping.updatecontactgroup
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /contactgroups
+      name: deletecontactgroup
+      operations:
+      - method: DELETE
+        name: deletecontactgroup
+        description: Delete a contact group
+        call: nodeping.deletecontactgroup
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /schedules
+      name: listschedules
+      operations:
+      - method: GET
+        name: listschedules
+        description: List notification schedules
+        call: nodeping.listschedules
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /schedules
+      name: updateschedule
+      operations:
+      - method: PUT
+        name: updateschedule
+        description: Update a schedule
+        call: nodeping.updateschedule
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /schedules
+      name: deleteschedule
+      operations:
+      - method: DELETE
+        name: deleteschedule
+        description: Delete a schedule
+        call: nodeping.deleteschedule
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /results
+      name: getresults
+      operations:
+      - method: GET
+        name: getresults
+        description: Get check results
+        call: nodeping.getresults
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /results/uptime
+      name: getuptime
+      operations:
+      - method: GET
+        name: getuptime
+        description: Get uptime statistics
+        call: nodeping.getuptime
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /results/current
+      name: getcurrentresults
+      operations:
+      - method: GET
+        name: getcurrentresults
+        description: Get current check states
+        call: nodeping.getcurrentresults
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /notifications
+      name: listnotifications
+      operations:
+      - method: GET
+        name: listnotifications
+        description: List notifications
+        call: nodeping.listnotifications
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /info
+      name: getinfo
+      operations:
+      - method: GET
+        name: getinfo
+        description: Get probe / location information
+        call: nodeping.getinfo
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: nodeping-mcp
+    transport: http
+    description: MCP adapter for NodePing API for AI agent use.
+    tools:
+    - name: getaccounts
+      description: Get account information
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: nodeping.getaccounts
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createaccount
+      description: Create a SubAccount
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: nodeping.createaccount
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: updateaccount
+      description: Update account
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: nodeping.updateaccount
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deleteaccount
+      description: Delete a SubAccount
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: nodeping.deleteaccount
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listchecks
+      description: List checks
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: nodeping.listchecks
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createcheck
+      description: Create a check
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: nodeping.createcheck
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getcheck
+      description: Get a single check
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: nodeping.getcheck
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: updatecheck
+      description: Update a check
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: nodeping.updatecheck
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deletecheck
+      description: Delete a check
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: nodeping.deletecheck
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listcontacts
+      description: List contacts
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: nodeping.listcontacts
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createcontact
+      description: Create a contact
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: nodeping.createcontact
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: updatecontact
+      description: Update a contact
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: nodeping.updatecontact
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deletecontact
+      description: Delete a contact
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: nodeping.deletecontact
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listcontactgroups
+      description: List contact groups
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: nodeping.listcontactgroups
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createcontactgroup
+      description: Create a contact group
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: nodeping.createcontactgroup
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: updatecontactgroup
+      description: Update a contact group
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: nodeping.updatecontactgroup
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deletecontactgroup
+      description: Delete a contact group
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: nodeping.deletecontactgroup
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listschedules
+      description: List notification schedules
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: nodeping.listschedules
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: updateschedule
+      description: Update a schedule
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: nodeping.updateschedule
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deleteschedule
+      description: Delete a schedule
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: nodeping.deleteschedule
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getresults
+      description: Get check results
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: nodeping.getresults
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getuptime
+      description: Get uptime statistics
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: nodeping.getuptime
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getcurrentresults
+      description: Get current check states
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: nodeping.getcurrentresults
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listnotifications
+      description: List notifications
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: nodeping.listnotifications
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getinfo
+      description: Get probe / location information
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: nodeping.getinfo
+      outputParameters:
+      - type: object
+        mapping: $.
+binds:
+- namespace: env
+  keys:
+    NODEPING_TOKEN: NODEPING_TOKEN
