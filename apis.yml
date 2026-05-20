@@ -8,50 +8,52 @@ position: Consumer
 access: 3rd-Party
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-- Monitoring
-- Uptime
-- Notifications
-- SaaS
+  - Monitoring
+  - Uptime
+  - Notifications
+  - SaaS
 created: '2025-02-12'
 modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-- aid: nodeping:nodeping
-  name: NodePing API
-  description: Uptime monitoring API for managing checks, contacts, schedules, and retrieving uptime results.
-  humanURL: https://nodeping.com/
-  baseURL: https://api.nodeping.com/api/1
-  tags:
-  - Monitoring
-  - Uptime
-  - Notifications
-  properties:
-  - type: Documentation
-    url: https://nodeping.com/docs-api.html
+  - aid: nodeping:nodeping
+    name: NodePing API
+    description: Uptime monitoring API for managing checks, contacts, schedules, and retrieving uptime results.
+    humanURL: https://nodeping.com/
+    baseURL: https://api.nodeping.com/api/1
+    tags:
+    - Monitoring
+    - Uptime
+    - Notifications
+    properties:
+    - type: Documentation
+      url: https://nodeping.com/docs-api.html
+    - type: Website
+      url: https://nodeping.com/
+    - type: OpenAPI
+      url: https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/openapi/nodeping-openapi.yml
+    - type: JSONSchema
+      url: https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-schema/nodeping-check-schema.json
+    - type: JSONLDContext
+      url: https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-ld/nodeping-context.jsonld
+    - type: NaftikoCapability
+      url: capabilities/nodeping.yaml
+common:
+  - type: GitHubOrganization
+    url: https://github.com/NodePing
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/nodeping
   - type: Website
     url: https://nodeping.com/
+  - type: Documentation
+    url: https://nodeping.com/docs-api.html
   - type: OpenAPI
     url: https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/openapi/nodeping-openapi.yml
   - type: JSONSchema
     url: https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-schema/nodeping-check-schema.json
   - type: JSONLDContext
     url: https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-ld/nodeping-context.jsonld
-  - type: NaftikoCapability
-    url: capabilities/nodeping.yaml
-common:
-- type: LinkedIn
-  url: https://www.linkedin.com/company/nodeping
-- type: Website
-  url: https://nodeping.com/
-- type: Documentation
-  url: https://nodeping.com/docs-api.html
-- type: OpenAPI
-  url: https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/openapi/nodeping-openapi.yml
-- type: JSONSchema
-  url: https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-schema/nodeping-check-schema.json
-- type: JSONLDContext
-  url: https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-ld/nodeping-context.jsonld
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
