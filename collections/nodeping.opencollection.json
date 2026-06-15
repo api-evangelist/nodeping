@@ -1,0 +1,318 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NodePing API",
+    "version": "1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "token",
+      "value": "{{token}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get account information",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.nodeping.com/api/1/accounts"
+      },
+      "docs": "Get account information"
+    },
+    {
+      "info": {
+        "name": "Create a SubAccount",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.nodeping.com/api/1/accounts"
+      },
+      "docs": "Create a SubAccount"
+    },
+    {
+      "info": {
+        "name": "Update account",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.nodeping.com/api/1/accounts"
+      },
+      "docs": "Update account"
+    },
+    {
+      "info": {
+        "name": "Delete a SubAccount",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.nodeping.com/api/1/accounts"
+      },
+      "docs": "Delete a SubAccount"
+    },
+    {
+      "info": {
+        "name": "List checks",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.nodeping.com/api/1/checks"
+      },
+      "docs": "List checks"
+    },
+    {
+      "info": {
+        "name": "Create a check",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.nodeping.com/api/1/checks",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create a check"
+    },
+    {
+      "info": {
+        "name": "Get a single check",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.nodeping.com/api/1/checks/:checkid",
+        "params": [
+          {
+            "name": "checkid",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get a single check"
+    },
+    {
+      "info": {
+        "name": "Update a check",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.nodeping.com/api/1/checks/:checkid",
+        "params": [
+          {
+            "name": "checkid",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update a check"
+    },
+    {
+      "info": {
+        "name": "Delete a check",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.nodeping.com/api/1/checks/:checkid",
+        "params": [
+          {
+            "name": "checkid",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete a check"
+    },
+    {
+      "info": {
+        "name": "List contacts",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.nodeping.com/api/1/contacts"
+      },
+      "docs": "List contacts"
+    },
+    {
+      "info": {
+        "name": "Create a contact",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.nodeping.com/api/1/contacts"
+      },
+      "docs": "Create a contact"
+    },
+    {
+      "info": {
+        "name": "Update a contact",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.nodeping.com/api/1/contacts"
+      },
+      "docs": "Update a contact"
+    },
+    {
+      "info": {
+        "name": "Delete a contact",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.nodeping.com/api/1/contacts"
+      },
+      "docs": "Delete a contact"
+    },
+    {
+      "info": {
+        "name": "List contact groups",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.nodeping.com/api/1/contactgroups"
+      },
+      "docs": "List contact groups"
+    },
+    {
+      "info": {
+        "name": "Create a contact group",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.nodeping.com/api/1/contactgroups"
+      },
+      "docs": "Create a contact group"
+    },
+    {
+      "info": {
+        "name": "Update a contact group",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.nodeping.com/api/1/contactgroups"
+      },
+      "docs": "Update a contact group"
+    },
+    {
+      "info": {
+        "name": "Delete a contact group",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.nodeping.com/api/1/contactgroups"
+      },
+      "docs": "Delete a contact group"
+    },
+    {
+      "info": {
+        "name": "List notification schedules",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.nodeping.com/api/1/schedules"
+      },
+      "docs": "List notification schedules"
+    },
+    {
+      "info": {
+        "name": "Update a schedule",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://api.nodeping.com/api/1/schedules"
+      },
+      "docs": "Update a schedule"
+    },
+    {
+      "info": {
+        "name": "Delete a schedule",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.nodeping.com/api/1/schedules"
+      },
+      "docs": "Delete a schedule"
+    },
+    {
+      "info": {
+        "name": "Get check results",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.nodeping.com/api/1/results"
+      },
+      "docs": "Get check results"
+    },
+    {
+      "info": {
+        "name": "Get uptime statistics",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.nodeping.com/api/1/results/uptime"
+      },
+      "docs": "Get uptime statistics"
+    },
+    {
+      "info": {
+        "name": "Get current check states",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.nodeping.com/api/1/results/current"
+      },
+      "docs": "Get current check states"
+    },
+    {
+      "info": {
+        "name": "List notifications",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.nodeping.com/api/1/notifications"
+      },
+      "docs": "List notifications"
+    },
+    {
+      "info": {
+        "name": "Get probe / location information",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.nodeping.com/api/1/info"
+      },
+      "docs": "Get probe / location information"
+    }
+  ],
+  "bundled": true
+}
