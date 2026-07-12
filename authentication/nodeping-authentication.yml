@@ -1,0 +1,23 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/nodeping-openapi.yml
+summary:
+  types:
+  - apiKey
+  - http
+  api_key_in:
+  - query
+schemes:
+- name: ApiTokenQuery
+  type: apiKey
+  in: query
+  parameter: token
+  description: API token passed as the `token` query parameter
+  sources:
+  - openapi/nodeping-openapi.yml
+- name: BasicAuth
+  type: http
+  scheme: basic
+  description: API token used as the username in HTTP Basic Auth
+  sources:
+  - openapi/nodeping-openapi.yml

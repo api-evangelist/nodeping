@@ -1,0 +1,25 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: nodeping.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec 16 23:59:59 2026 GMT
+  hsts: false
+- host: api.nodeping.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec 16 23:59:59 2026 GMT
+  hsts: false
+domains:
+- domain: nodeping.com
+  dnssec: false
+  caa:
+  - 0 issue "letsencrypt.org"
+  - 0 issuewild "sectigo.com"
+  - 0 iodef "mailto:support@nodeping.com"
+  - 0 issue "sectigo.com"
+  spf: true
+  dmarc: true
+  dmarc_policy: none
