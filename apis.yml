@@ -40,6 +40,8 @@ apis:
       - type: JSONLDContext
         url: https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-ld/nodeping-context.jsonld
 common:
+  - type: AgenticAccess
+    url: agentic-access/nodeping-agentic-access.yml
   - type: DomainSecurity
     url: security/nodeping-domain-security.yml
   - type: Authentication
