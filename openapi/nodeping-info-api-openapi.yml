@@ -1,0 +1,43 @@
+openapi: 3.1.0
+info:
+  title: NodePing Accounts Info API
+  description: NodePing provides uptime monitoring for websites and services. The REST API lets accounts manage checks, contacts, contact groups, schedules, results, notifications, and account settings.
+  version: '1'
+  contact:
+    name: NodePing Support
+    url: https://nodeping.com/
+  license:
+    name: Proprietary
+    url: https://nodeping.com/
+servers:
+- url: https://api.nodeping.com/api/1
+  description: NodePing API v1
+security:
+- ApiTokenQuery: []
+- BasicAuth: []
+tags:
+- name: Info
+paths:
+  /info:
+    get:
+      summary: Get probe / location information
+      operationId: getInfo
+      responses:
+        '200':
+          description: Probe info returned
+      tags:
+      - Info
+components:
+  securitySchemes:
+    ApiTokenQuery:
+      type: apiKey
+      in: query
+      name: token
+      description: API token passed as the `token` query parameter
+    BasicAuth:
+      type: http
+      scheme: basic
+      description: API token used as the username in HTTP Basic Auth
+externalDocs:
+  description: NodePing API Documentation
+  url: https://nodeping.com/docs-api.html
