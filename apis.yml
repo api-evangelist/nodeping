@@ -5,9 +5,22 @@ description: >-
   international SMS notifications and unlimited users. The REST API exposes accounts, contacts, contact groups,
   schedules, checks, results, notifications, and probe info.
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nodeping.png
 tags:
   - Monitoring
   - Uptime
@@ -18,27 +31,166 @@ modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: nodeping:nodeping
-    name: NodePing API
-    description: Uptime monitoring API for managing checks, contacts, schedules, and retrieving uptime results.
-    humanURL: https://nodeping.com/
-    baseURL: https://api.nodeping.com/api/1
-    tags:
-      - Monitoring
-      - Uptime
-      - Notifications
-    properties:
-      - type: Documentation
-        url: https://nodeping.com/docs-api.html
-      - type: Website
-        url: https://nodeping.com/
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/openapi/nodeping-openapi.yml
-      - type: JSONSchema
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-schema/nodeping-check-schema.json
-      - type: JSONLDContext
-        url: https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-ld/nodeping-context.jsonld
+- aid: nodeping:nodeping-accounts-api
+  name: NodePing Accounts API
+  description: The Accounts API from NodePing — 1 operation(s) for accounts.
+  humanURL: https://nodeping.com/
+  baseURL: https://api.nodeping.com/api/1
+  tags:
+  - Accounts
+  properties:
+  - type: OpenAPI
+    url: openapi/nodeping-accounts-api-openapi.yml
+  - type: Documentation
+    url: https://nodeping.com/docs-api.html
+  - type: Website
+    url: https://nodeping.com/
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-schema/nodeping-check-schema.json
+  - type: JSONLDContext
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-ld/nodeping-context.jsonld
+- aid: nodeping:nodeping-checks-api
+  name: NodePing Checks API
+  description: The Checks API from NodePing — 2 operation(s) for checks.
+  humanURL: https://nodeping.com/
+  baseURL: https://api.nodeping.com/api/1
+  tags:
+  - Checks
+  properties:
+  - type: OpenAPI
+    url: openapi/nodeping-checks-api-openapi.yml
+  - type: Documentation
+    url: https://nodeping.com/docs-api.html
+  - type: Website
+    url: https://nodeping.com/
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-schema/nodeping-check-schema.json
+  - type: JSONLDContext
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-ld/nodeping-context.jsonld
+- aid: nodeping:nodeping-contactgroups-api
+  name: NodePing Contactgroups API
+  description: The Contactgroups API from NodePing — 1 operation(s) for contactgroups.
+  humanURL: https://nodeping.com/
+  baseURL: https://api.nodeping.com/api/1
+  tags:
+  - Contactgroups
+  properties:
+  - type: OpenAPI
+    url: openapi/nodeping-contactgroups-api-openapi.yml
+  - type: Documentation
+    url: https://nodeping.com/docs-api.html
+  - type: Website
+    url: https://nodeping.com/
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-schema/nodeping-check-schema.json
+  - type: JSONLDContext
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-ld/nodeping-context.jsonld
+- aid: nodeping:nodeping-contacts-api
+  name: NodePing Contacts API
+  description: The Contacts API from NodePing — 1 operation(s) for contacts.
+  humanURL: https://nodeping.com/
+  baseURL: https://api.nodeping.com/api/1
+  tags:
+  - Contacts
+  properties:
+  - type: OpenAPI
+    url: openapi/nodeping-contacts-api-openapi.yml
+  - type: Documentation
+    url: https://nodeping.com/docs-api.html
+  - type: Website
+    url: https://nodeping.com/
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-schema/nodeping-check-schema.json
+  - type: JSONLDContext
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-ld/nodeping-context.jsonld
+- aid: nodeping:nodeping-info-api
+  name: NodePing Info API
+  description: The Info API from NodePing — 1 operation(s) for info.
+  humanURL: https://nodeping.com/
+  baseURL: https://api.nodeping.com/api/1
+  tags:
+  - Info
+  properties:
+  - type: OpenAPI
+    url: openapi/nodeping-info-api-openapi.yml
+  - type: Documentation
+    url: https://nodeping.com/docs-api.html
+  - type: Website
+    url: https://nodeping.com/
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-schema/nodeping-check-schema.json
+  - type: JSONLDContext
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-ld/nodeping-context.jsonld
+- aid: nodeping:nodeping-notifications-api
+  name: NodePing Notifications API
+  description: The Notifications API from NodePing — 1 operation(s) for notifications.
+  humanURL: https://nodeping.com/
+  baseURL: https://api.nodeping.com/api/1
+  tags:
+  - Notifications
+  properties:
+  - type: OpenAPI
+    url: openapi/nodeping-notifications-api-openapi.yml
+  - type: Documentation
+    url: https://nodeping.com/docs-api.html
+  - type: Website
+    url: https://nodeping.com/
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-schema/nodeping-check-schema.json
+  - type: JSONLDContext
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-ld/nodeping-context.jsonld
+- aid: nodeping:nodeping-results-api
+  name: NodePing Results API
+  description: The Results API from NodePing — 3 operation(s) for results.
+  humanURL: https://nodeping.com/
+  baseURL: https://api.nodeping.com/api/1
+  tags:
+  - Results
+  properties:
+  - type: OpenAPI
+    url: openapi/nodeping-results-api-openapi.yml
+  - type: Documentation
+    url: https://nodeping.com/docs-api.html
+  - type: Website
+    url: https://nodeping.com/
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-schema/nodeping-check-schema.json
+  - type: JSONLDContext
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-ld/nodeping-context.jsonld
+- aid: nodeping:nodeping-schedules-api
+  name: NodePing Schedules API
+  description: The Schedules API from NodePing — 1 operation(s) for schedules.
+  humanURL: https://nodeping.com/
+  baseURL: https://api.nodeping.com/api/1
+  tags:
+  - Schedules
+  properties:
+  - type: OpenAPI
+    url: openapi/nodeping-schedules-api-openapi.yml
+  - type: Documentation
+    url: https://nodeping.com/docs-api.html
+  - type: Website
+    url: https://nodeping.com/
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-schema/nodeping-check-schema.json
+  - type: JSONLDContext
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-ld/nodeping-context.jsonld
 common:
   - type: AgenticAccess
     url: agentic-access/nodeping-agentic-access.yml
