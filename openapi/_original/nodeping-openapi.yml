@@ -1,0 +1,200 @@
+openapi: 3.1.0
+info:
+  title: NodePing API
+  description: >-
+    NodePing provides uptime monitoring for websites and services. The REST API
+    lets accounts manage checks, contacts, contact groups, schedules, results,
+    notifications, and account settings.
+  version: "1"
+  contact:
+    name: NodePing Support
+    url: https://nodeping.com/
+  license:
+    name: Proprietary
+    url: https://nodeping.com/
+externalDocs:
+  description: NodePing API Documentation
+  url: https://nodeping.com/docs-api.html
+servers:
+  - url: https://api.nodeping.com/api/1
+    description: NodePing API v1
+security:
+  - ApiTokenQuery: []
+  - BasicAuth: []
+paths:
+  /accounts:
+    get:
+      summary: Get account information
+      operationId: getAccounts
+      responses:
+        '200': { description: Account details }
+    post:
+      summary: Create a SubAccount
+      operationId: createAccount
+      responses:
+        '200': { description: SubAccount created }
+    put:
+      summary: Update account
+      operationId: updateAccount
+      responses:
+        '200': { description: Account updated }
+    delete:
+      summary: Delete a SubAccount
+      operationId: deleteAccount
+      responses:
+        '200': { description: Account deleted }
+  /checks:
+    get:
+      summary: List checks
+      operationId: listChecks
+      responses:
+        '200': { description: Checks listed }
+    post:
+      summary: Create a check
+      operationId: createCheck
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [type]
+              properties:
+                type: { type: string }
+                target: { type: string }
+                label: { type: string }
+                interval: { type: integer }
+                enabled: { type: boolean }
+                notifications: { type: array, items: { type: object } }
+                threshold: { type: integer }
+                sens: { type: integer }
+                public: { type: boolean }
+                autodiag: { type: boolean }
+                runlocations: { type: array, items: { type: string } }
+                homeloc: { type: string }
+                dep: { type: string }
+                mute: { type: boolean }
+                description: { type: string }
+                tags: { type: array, items: { type: string } }
+      responses:
+        '200': { description: Check created }
+  /checks/{checkid}:
+    parameters:
+      - in: path
+        name: checkid
+        required: true
+        schema: { type: string }
+    get:
+      summary: Get a single check
+      operationId: getCheck
+      responses:
+        '200': { description: Check details }
+    put:
+      summary: Update a check
+      operationId: updateCheck
+      responses:
+        '200': { description: Check updated }
+    delete:
+      summary: Delete a check
+      operationId: deleteCheck
+      responses:
+        '200': { description: Check deleted }
+  /contacts:
+    get:
+      summary: List contacts
+      operationId: listContacts
+      responses:
+        '200': { description: Contacts listed }
+    post:
+      summary: Create a contact
+      operationId: createContact
+      responses:
+        '200': { description: Contact created }
+    put:
+      summary: Update a contact
+      operationId: updateContact
+      responses:
+        '200': { description: Contact updated }
+    delete:
+      summary: Delete a contact
+      operationId: deleteContact
+      responses:
+        '200': { description: Contact deleted }
+  /contactgroups:
+    get:
+      summary: List contact groups
+      operationId: listContactGroups
+      responses:
+        '200': { description: Contact groups listed }
+    post:
+      summary: Create a contact group
+      operationId: createContactGroup
+      responses:
+        '200': { description: Contact group created }
+    put:
+      summary: Update a contact group
+      operationId: updateContactGroup
+      responses:
+        '200': { description: Contact group updated }
+    delete:
+      summary: Delete a contact group
+      operationId: deleteContactGroup
+      responses:
+        '200': { description: Contact group deleted }
+  /schedules:
+    get:
+      summary: List notification schedules
+      operationId: listSchedules
+      responses:
+        '200': { description: Schedules listed }
+    put:
+      summary: Update a schedule
+      operationId: updateSchedule
+      responses:
+        '200': { description: Schedule updated }
+    delete:
+      summary: Delete a schedule
+      operationId: deleteSchedule
+      responses:
+        '200': { description: Schedule deleted }
+  /results:
+    get:
+      summary: Get check results
+      operationId: getResults
+      responses:
+        '200': { description: Results returned }
+  /results/uptime:
+    get:
+      summary: Get uptime statistics
+      operationId: getUptime
+      responses:
+        '200': { description: Uptime returned }
+  /results/current:
+    get:
+      summary: Get current check states
+      operationId: getCurrentResults
+      responses:
+        '200': { description: Current results returned }
+  /notifications:
+    get:
+      summary: List notifications
+      operationId: listNotifications
+      responses:
+        '200': { description: Notifications returned }
+  /info:
+    get:
+      summary: Get probe / location information
+      operationId: getInfo
+      responses:
+        '200': { description: Probe info returned }
+components:
+  securitySchemes:
+    ApiTokenQuery:
+      type: apiKey
+      in: query
+      name: token
+      description: API token passed as the `token` query parameter
+    BasicAuth:
+      type: http
+      scheme: basic
+      description: API token used as the username in HTTP Basic Auth

@@ -1,0 +1,28 @@
+{
+  "provider": "nodeping",
+  "sources": [
+    "nodeping-accounts-api-openapi.yml",
+    "nodeping-checks-api-openapi.yml",
+    "nodeping-contactgroups-api-openapi.yml",
+    "nodeping-contacts-api-openapi.yml",
+    "nodeping-info-api-openapi.yml",
+    "nodeping-notifications-api-openapi.yml",
+    "nodeping-results-api-openapi.yml",
+    "nodeping-schedules-api-openapi.yml"
+  ],
+  "outputs": [
+    "nodeping-accounts-api-openapi.yml",
+    "nodeping-checks-api-openapi.yml",
+    "nodeping-contactgroups-api-openapi.yml",
+    "nodeping-contacts-api-openapi.yml",
+    "nodeping-info-api-openapi.yml",
+    "nodeping-notifications-api-openapi.yml",
+    "nodeping-results-api-openapi.yml",
+    "nodeping-schedules-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
