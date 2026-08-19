@@ -1,0 +1,233 @@
+{
+  "item": [
+    {
+      "id": "01847cb0-930f-410d-8c98-74b73b9506a0",
+      "name": "Results",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a41d4402-7a03-40b8-ba77-554700930922",
+          "name": "Get check results",
+          "request": {
+            "name": "Get check results",
+            "description": {},
+            "url": {
+              "path": [
+                "results"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dbec7f5f-e18c-4ddd-a80d-233e43b6964b",
+              "name": "Results returned",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "results"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "887e107c-b2e0-484b-9a1f-5d3f5672c386",
+          "name": "Get uptime statistics",
+          "request": {
+            "name": "Get uptime statistics",
+            "description": {},
+            "url": {
+              "path": [
+                "results",
+                "uptime"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9b40a428-cfeb-4c28-b7be-7aaea08fabbc",
+              "name": "Uptime returned",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "results",
+                    "uptime"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e9d4ce78-d2db-493d-a236-36761cd8323f",
+          "name": "Get current check states",
+          "request": {
+            "name": "Get current check states",
+            "description": {},
+            "url": {
+              "path": [
+                "results",
+                "current"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "eb2fdcda-7111-4ec1-9266-d591d1922af7",
+              "name": "Current results returned",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "results",
+                    "current"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.nodeping.com/api/1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "token"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "9b234e0b-6ff3-4ab6-b32b-b1528ec1348c",
+    "name": "NodePing Accounts Results API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "NodePing provides uptime monitoring for websites and services. The REST API lets accounts manage checks, contacts, contact groups, schedules, results, notifications, and account settings.\n\nContact Support:\n Name: NodePing Support",
+      "type": "text/plain"
+    }
+  }
+}

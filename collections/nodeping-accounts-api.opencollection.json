@@ -1,0 +1,70 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NodePing Accounts API",
+    "version": "1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "token",
+      "value": "{{token}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Accounts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get account information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nodeping.com/api/1/accounts"
+          },
+          "docs": "Get account information"
+        },
+        {
+          "info": {
+            "name": "Create a SubAccount",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.nodeping.com/api/1/accounts"
+          },
+          "docs": "Create a SubAccount"
+        },
+        {
+          "info": {
+            "name": "Update account",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.nodeping.com/api/1/accounts"
+          },
+          "docs": "Update account"
+        },
+        {
+          "info": {
+            "name": "Delete a SubAccount",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.nodeping.com/api/1/accounts"
+          },
+          "docs": "Delete a SubAccount"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

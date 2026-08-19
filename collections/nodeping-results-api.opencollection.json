@@ -1,0 +1,59 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NodePing Accounts Results API",
+    "version": "1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "token",
+      "value": "{{token}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Results",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get check results",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nodeping.com/api/1/results"
+          },
+          "docs": "Get check results"
+        },
+        {
+          "info": {
+            "name": "Get uptime statistics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nodeping.com/api/1/results/uptime"
+          },
+          "docs": "Get uptime statistics"
+        },
+        {
+          "info": {
+            "name": "Get current check states",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nodeping.com/api/1/results/current"
+          },
+          "docs": "Get current check states"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

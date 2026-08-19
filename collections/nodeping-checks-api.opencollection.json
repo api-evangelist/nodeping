@@ -1,0 +1,106 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NodePing Accounts Checks API",
+    "version": "1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "token",
+      "value": "{{token}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Checks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List checks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nodeping.com/api/1/checks"
+          },
+          "docs": "List checks"
+        },
+        {
+          "info": {
+            "name": "Create a check",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.nodeping.com/api/1/checks",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a check"
+        },
+        {
+          "info": {
+            "name": "Get a single check",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nodeping.com/api/1/checks/:checkid",
+            "params": [
+              {
+                "name": "checkid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a single check"
+        },
+        {
+          "info": {
+            "name": "Update a check",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.nodeping.com/api/1/checks/:checkid",
+            "params": [
+              {
+                "name": "checkid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a check"
+        },
+        {
+          "info": {
+            "name": "Delete a check",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.nodeping.com/api/1/checks/:checkid",
+            "params": [
+              {
+                "name": "checkid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a check"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

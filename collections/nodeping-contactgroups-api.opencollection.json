@@ -1,0 +1,70 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NodePing Accounts Contactgroups API",
+    "version": "1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "token",
+      "value": "{{token}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Contactgroups",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List contact groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.nodeping.com/api/1/contactgroups"
+          },
+          "docs": "List contact groups"
+        },
+        {
+          "info": {
+            "name": "Create a contact group",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.nodeping.com/api/1/contactgroups"
+          },
+          "docs": "Create a contact group"
+        },
+        {
+          "info": {
+            "name": "Update a contact group",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.nodeping.com/api/1/contactgroups"
+          },
+          "docs": "Update a contact group"
+        },
+        {
+          "info": {
+            "name": "Delete a contact group",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.nodeping.com/api/1/contactgroups"
+          },
+          "docs": "Delete a contact group"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

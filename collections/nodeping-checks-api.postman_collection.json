@@ -1,0 +1,426 @@
+{
+  "item": [
+    {
+      "id": "4597f40d-c733-4fde-82e2-3d67a700912c",
+      "name": "Checks",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2340a4e0-73e9-456d-9d4c-a0baa81dd391",
+          "name": "List checks",
+          "request": {
+            "name": "List checks",
+            "description": {},
+            "url": {
+              "path": [
+                "checks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3230cd9d-8588-4501-afa8-e1f423f7d1af",
+              "name": "Checks listed",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "checks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d0965418-7ea2-46d9-b6e4-e8415c7c8b80",
+          "name": "Create a check",
+          "request": {
+            "name": "Create a check",
+            "description": {},
+            "url": {
+              "path": [
+                "checks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"<string>\",\n  \"target\": \"<string>\",\n  \"label\": \"<string>\",\n  \"interval\": \"<integer>\",\n  \"enabled\": \"<boolean>\",\n  \"notifications\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"threshold\": \"<integer>\",\n  \"sens\": \"<integer>\",\n  \"public\": \"<boolean>\",\n  \"autodiag\": \"<boolean>\",\n  \"runlocations\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"homeloc\": \"<string>\",\n  \"dep\": \"<string>\",\n  \"mute\": \"<boolean>\",\n  \"description\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c9e9508a-acf9-4bf9-bafc-8243dc8fd817",
+              "name": "Check created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "checks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"type\": \"<string>\",\n  \"target\": \"<string>\",\n  \"label\": \"<string>\",\n  \"interval\": \"<integer>\",\n  \"enabled\": \"<boolean>\",\n  \"notifications\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"threshold\": \"<integer>\",\n  \"sens\": \"<integer>\",\n  \"public\": \"<boolean>\",\n  \"autodiag\": \"<boolean>\",\n  \"runlocations\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"homeloc\": \"<string>\",\n  \"dep\": \"<string>\",\n  \"mute\": \"<boolean>\",\n  \"description\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "de4a5400-6957-4ab3-abe7-39ced076c25a",
+          "name": "Get a single check",
+          "request": {
+            "name": "Get a single check",
+            "description": {},
+            "url": {
+              "path": [
+                "checks",
+                ":checkid"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "checkid",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f5d7cfd7-0cc5-4ffe-ba16-8c6db84a8358",
+              "name": "Check details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "checks",
+                    ":checkid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "checkid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2c681335-dcb4-4fde-89be-15cea503077f",
+          "name": "Update a check",
+          "request": {
+            "name": "Update a check",
+            "description": {},
+            "url": {
+              "path": [
+                "checks",
+                ":checkid"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "checkid",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1796eaab-659f-467a-85ba-88dd63a0600d",
+              "name": "Check updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "checks",
+                    ":checkid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "checkid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0d1afe29-e9f2-405d-b223-c76f762e4d0e",
+          "name": "Delete a check",
+          "request": {
+            "name": "Delete a check",
+            "description": {},
+            "url": {
+              "path": [
+                "checks",
+                ":checkid"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "checkid",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d0d68160-859c-4a55-a42e-484d5c922755",
+              "name": "Check deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "checks",
+                    ":checkid"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "checkid",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.nodeping.com/api/1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "token"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "96d04077-0c96-4ecf-aaac-52840d1a073f",
+    "name": "NodePing Accounts Checks API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "NodePing provides uptime monitoring for websites and services. The REST API lets accounts manage checks, contacts, contact groups, schedules, results, notifications, and account settings.\n\nContact Support:\n Name: NodePing Support",
+      "type": "text/plain"
+    }
+  }
+}
