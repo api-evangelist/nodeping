@@ -24,6 +24,11 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nodeping.p
 tags:
   - Monitoring
   - Uptime
+  - Notification
+  - Software-as-a-Service
+tags_raw:
+  - Monitoring
+  - Uptime
   - Notifications
   - SaaS
 created: '2025-02-12'
@@ -37,6 +42,8 @@ apis:
   humanURL: https://nodeping.com/
   baseURL: https://api.nodeping.com/api/1
   tags:
+  - Account
+  tags_raw:
   - Accounts
   properties:
   - type: OpenAPI
@@ -77,6 +84,8 @@ apis:
   humanURL: https://nodeping.com/
   baseURL: https://api.nodeping.com/api/1
   tags:
+  - Contact Groups
+  tags_raw:
   - Contactgroups
   properties:
   - type: OpenAPI
@@ -137,6 +146,8 @@ apis:
   humanURL: https://nodeping.com/
   baseURL: https://api.nodeping.com/api/1
   tags:
+  - Notification
+  tags_raw:
   - Notifications
   properties:
   - type: OpenAPI
