@@ -5,6 +5,17 @@ description: >-
   international SMS notifications and unlimited users. The REST API exposes accounts, contacts, contact groups,
   schedules, checks, results, notifications, and probe info.
 type: Index
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: true
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
