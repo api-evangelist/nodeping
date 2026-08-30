@@ -95,7 +95,7 @@ apis:
   humanURL: https://nodeping.com/
   baseURL: https://api.nodeping.com/api/1
   tags:
-  - Contact Groups
+  - Contactgroups
   tags_raw:
   - Contactgroups
   properties:
