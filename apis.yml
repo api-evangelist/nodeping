@@ -178,6 +178,8 @@ apis:
   humanURL: https://nodeping.com/
   baseURL: https://api.nodeping.com/api/1
   tags:
+  - Schedule
+  tags_raw:
   - Schedules
   properties:
   - type: OpenAPI
