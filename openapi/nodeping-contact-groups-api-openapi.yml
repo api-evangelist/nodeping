@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: NodePing Accounts Contactgroups API
+  title: NodePing Contactgroups API
   description: NodePing provides uptime monitoring for websites and services. The REST API lets accounts manage checks, contacts, contact groups, schedules, results, notifications, and account settings.
   version: '1'
   contact:
@@ -16,7 +16,7 @@ security:
 - ApiTokenQuery: []
 - BasicAuth: []
 tags:
-- name: Contactgroups
+- name: Contact Groups
 paths:
   /contactgroups:
     get:
@@ -26,7 +26,7 @@ paths:
         '200':
           description: Contact groups listed
       tags:
-      - Contactgroups
+      - Contact Groups
     post:
       summary: Create a contact group
       operationId: createContactGroup
@@ -34,7 +34,7 @@ paths:
         '200':
           description: Contact group created
       tags:
-      - Contactgroups
+      - Contact Groups
     put:
       summary: Update a contact group
       operationId: updateContactGroup
@@ -42,7 +42,7 @@ paths:
         '200':
           description: Contact group updated
       tags:
-      - Contactgroups
+      - Contact Groups
     delete:
       summary: Delete a contact group
       operationId: deleteContactGroup
@@ -50,7 +50,7 @@ paths:
         '200':
           description: Contact group deleted
       tags:
-      - Contactgroups
+      - Contact Groups
 components:
   securitySchemes:
     ApiTokenQuery:

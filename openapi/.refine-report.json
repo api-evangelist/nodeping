@@ -1,14 +1,7 @@
 {
   "provider": "nodeping",
   "sources": [
-    "nodeping-accounts-api-openapi.yml",
-    "nodeping-checks-api-openapi.yml",
-    "nodeping-contactgroups-api-openapi.yml",
-    "nodeping-contacts-api-openapi.yml",
-    "nodeping-info-api-openapi.yml",
-    "nodeping-notifications-api-openapi.yml",
-    "nodeping-results-api-openapi.yml",
-    "nodeping-schedules-api-openapi.yml"
+    "_original/nodeping-openapi.yml"
   ],
   "outputs": [
     "nodeping-accounts-api-openapi.yml",
@@ -20,9 +13,58 @@
     "nodeping-results-api-openapi.yml",
     "nodeping-schedules-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "nodeping-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "nodeping-openapi.yml: tagged paths GET /accounts -> Accounts",
+    "nodeping-openapi.yml: tagged paths POST /accounts -> Accounts",
+    "nodeping-openapi.yml: tagged paths PUT /accounts -> Accounts",
+    "nodeping-openapi.yml: tagged paths DELETE /accounts -> Accounts",
+    "nodeping-openapi.yml: tagged paths GET /checks -> Checks",
+    "nodeping-openapi.yml: tagged paths POST /checks -> Checks",
+    "nodeping-openapi.yml: tagged paths GET /checks/{checkid} -> Checks",
+    "nodeping-openapi.yml: tagged paths PUT /checks/{checkid} -> Checks",
+    "nodeping-openapi.yml: tagged paths DELETE /checks/{checkid} -> Checks",
+    "nodeping-openapi.yml: tagged paths GET /contacts -> Contacts",
+    "nodeping-openapi.yml: tagged paths POST /contacts -> Contacts",
+    "nodeping-openapi.yml: tagged paths PUT /contacts -> Contacts",
+    "nodeping-openapi.yml: tagged paths DELETE /contacts -> Contacts",
+    "nodeping-openapi.yml: tagged paths GET /contactgroups -> Contactgroups",
+    "nodeping-openapi.yml: tagged paths POST /contactgroups -> Contactgroups",
+    "nodeping-openapi.yml: tagged paths PUT /contactgroups -> Contactgroups",
+    "nodeping-openapi.yml: tagged paths DELETE /contactgroups -> Contactgroups",
+    "nodeping-openapi.yml: tagged paths GET /schedules -> Schedules",
+    "nodeping-openapi.yml: tagged paths PUT /schedules -> Schedules",
+    "nodeping-openapi.yml: tagged paths DELETE /schedules -> Schedules",
+    "nodeping-openapi.yml: tagged paths GET /results -> Results",
+    "nodeping-openapi.yml: tagged paths GET /results/uptime -> Results",
+    "nodeping-openapi.yml: tagged paths GET /results/current -> Results",
+    "nodeping-openapi.yml: tagged paths GET /notifications -> Notifications",
+    "nodeping-openapi.yml: tagged paths GET /info -> Info",
+    "nodeping-openapi.yml: declared missing tag: Accounts",
+    "nodeping-openapi.yml: declared missing tag: Checks",
+    "nodeping-openapi.yml: declared missing tag: Contactgroups",
+    "nodeping-openapi.yml: declared missing tag: Contacts",
+    "nodeping-openapi.yml: declared missing tag: Info",
+    "nodeping-openapi.yml: declared missing tag: Notifications",
+    "nodeping-openapi.yml: declared missing tag: Results",
+    "nodeping-openapi.yml: declared missing tag: Schedules",
+    "superseded outputs removed: nodeping-contact-groups-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 8 total)"
+  ],
+  "skipped": [
+    "nodeping-accounts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "nodeping-checks-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "nodeping-contact-groups-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "nodeping-contacts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "nodeping-info-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "nodeping-notifications-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "nodeping-results-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "nodeping-schedules-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
