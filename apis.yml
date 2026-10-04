@@ -215,6 +215,9 @@ apis:
     url: >-
       https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-ld/nodeping-context.jsonld
 common:
+  - type: CapabilityMap
+    url: capabilities/nodeping-capability-edges.yml
+    name: NodePing Business Capability Map
   - type: AgenticAccess
     url: agentic-access/nodeping-agentic-access.yml
   - type: DomainSecurity
