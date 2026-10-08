@@ -215,6 +215,12 @@ apis:
     url: >-
       https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-ld/nodeping-context.jsonld
 common:
+  - type: Plans
+    url: plans/nodeping-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/nodeping-rate-limits.yml
+  - type: FinOps
+    url: finops/nodeping-finops.yml
   - url: https://blog.nodeping.com/feed/
     type: BlogRSS
   - type: CapabilityMap
