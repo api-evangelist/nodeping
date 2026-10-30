@@ -1,4 +1,4 @@
-# NodePing (nodeping)
+# NodePing
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,62 +66,147 @@
 
 NodePing provides uptime monitoring for websites and services with flat-rate plans that include unlimited international SMS notifications and unlimited users. The REST API exposes accounts, contacts, contact groups, schedules, checks, results, notifications, and probe info.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/apis.yml)
+**Areas:** Monitoring · Uptime · Notification · Software-as-a-Service
 
-## Scope
+## NodePing on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for NodePing is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/nodeping/](https://apis.io/providers/nodeping/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (8)
 
-- Monitoring
-- Uptime
-- Notifications
-- SaaS
+- [NodePing Accounts API](https://apis.io/apis/nodeping/nodeping-accounts-api/) — The Accounts API from NodePing — 1 operation(s) for accounts.
+- [NodePing Checks API](https://apis.io/apis/nodeping/nodeping-checks-api/) — The Checks API from NodePing — 2 operation(s) for checks.
+- [NodePing Contacts API](https://apis.io/apis/nodeping/nodeping-contacts-api/) — The Contacts API from NodePing — 1 operation(s) for contacts.
+- [NodePing Info API](https://apis.io/apis/nodeping/nodeping-info-api/) — The Info API from NodePing — 1 operation(s) for info.
+- [NodePing Notifications API](https://apis.io/apis/nodeping/nodeping-notifications-api/) — The Notifications API from NodePing — 1 operation(s) for notifications.
+- [NodePing Results API](https://apis.io/apis/nodeping/nodeping-results-api/) — The Results API from NodePing — 3 operation(s) for results.
+- [NodePing Schedules API](https://apis.io/apis/nodeping/nodeping-schedules-api/) — The Schedules API from NodePing — 1 operation(s) for schedules.
+- [NodePing Contact Groups API](https://apis.io/apis/nodeping/nodeping-contact-groups-api/) — The Contact Groups API from NodePing — 1 operation(s) for contact groups.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-02-12
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### NodePing API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Uptime monitoring API for managing checks, contacts, schedules, and retrieving uptime results.
+- [Nodeping Agentic Access](https://apis.io/agentic-access/nodeping/nodeping-agentic-access/)
 
-- **Human URL:** [https://nodeping.com/](https://nodeping.com/)
-- **Base URL:** `https://api.nodeping.com/api/1`
+#### JSON Schema (1)
 
-#### Tags
+The data models the API reads and writes.
 
-- Monitoring
-- Uptime
-- Notifications
+- [NodePing Check](https://apis.io/schemas/nodeping/nodeping-check/)
 
-#### Properties
+#### JSON-LD (1)
 
-- [Documentation](https://nodeping.com/docs-api.html)
+Linked-data contexts for the provider's vocabulary.
+
+- [Nodeping Context](https://apis.io/jsonld/nodeping/nodeping-context/)
+
+#### Collections (9)
+
+Postman and Open Collection request collections.
+
+- [NodePing API](https://apis.io/collections/nodeping/open-nodeping/)
+- [NodePing Accounts API](https://apis.io/collections/nodeping/open-nodeping-accounts-api/)
+- [NodePing Accounts Checks API](https://apis.io/collections/nodeping/open-nodeping-checks-api/)
+- [NodePing Accounts Contactgroups API](https://apis.io/collections/nodeping/open-nodeping-contactgroups-api/)
+- [NodePing Accounts Contacts API](https://apis.io/collections/nodeping/open-nodeping-contacts-api/)
+- [NodePing Accounts Info API](https://apis.io/collections/nodeping/open-nodeping-info-api/)
+- [NodePing Accounts Notifications API](https://apis.io/collections/nodeping/open-nodeping-notifications-api/)
+- [NodePing Accounts Results API](https://apis.io/collections/nodeping/open-nodeping-results-api/)
+- [NodePing Accounts Schedules API](https://apis.io/collections/nodeping/open-nodeping-schedules-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [NodePing — jsonschema rules](https://apis.io/rules/nodeping/nodeping-jsonschema-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Nodeping Authentication](https://apis.io/security/nodeping/nodeping-authentication/)
+- [Nodeping Domain Security](https://apis.io/security/nodeping/nodeping-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Nodeping Plans Pricing](https://apis.io/plans/nodeping/nodeping-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Nodeping Rate Limits](https://apis.io/rate-limits/nodeping/nodeping-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Nodeping Finops](https://apis.io/finops/nodeping/nodeping-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://nodeping.com/)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/openapi/nodeping-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [JSON Schema](https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-schema/nodeping-check-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [J S O N L D Context](https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-ld/nodeping-context.jsonld)
-- [Postman Collection](collections/nodeping.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/nodeping.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [GitHub Organization](https://github.com/NodePing)
-- [LinkedIn](https://www.linkedin.com/company/nodeping)
-- [Website](https://nodeping.com/)
 - [Documentation](https://nodeping.com/docs-api.html)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/openapi/nodeping-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [JSON Schema](https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-schema/nodeping-check-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [J S O N L D Context](https://raw.githubusercontent.com/api-evangelist/nodeping/refs/heads/main/json-ld/nodeping-context.jsonld)
+- [GitHub](https://github.com/NodePing)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 27.6** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 56.0 |
+| Contract governance | 9.8 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 7.9 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/nodeping/](https://apis.io/providers/nodeping/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for NodePing: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/nodeping/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
